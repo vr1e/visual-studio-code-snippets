@@ -1,0 +1,19 @@
+{
+	"simple import": {
+		"prefix": "imp",
+		"body": ["import {$0} from '$1';"],
+		"description": "Simple universal import"
+	},
+
+	"simple arrow function": {
+		"prefix": "fn",
+		"body": ["($1) => {$0}"],
+		"description": "Simple arrow function"
+	},
+
+	"console log": {
+		"prefix": "clg",
+		"body": ["console.log($0)"],
+		"description": "Simple console log"
+	}
+}

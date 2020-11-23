@@ -1,0 +1,19 @@
+{
+	"simple import": {
+		"prefix": "imp",
+		"body": ["import {$0} from '$1';"],
+		"description": "Simple universal import"
+	},
+
+	"ES6 function": {
+		"prefix": "fn",
+		"body": ["($1) => {$0}"],
+		"description": "Simple es6 function"
+	},
+
+	"console log": {
+		"prefix": "clg",
+		"body": ["console.log($0)"],
+		"description": "Simple console log"
+	}
+}

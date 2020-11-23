@@ -1,0 +1,43 @@
+{
+	"Typescript react functional component": {
+		"prefix": "trfc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"interface Props {",
+			"\t$1",
+			"}",
+			"",
+			"const $TM_FILENAME_BASE: React.FC<Props> = ({$2}) => {",
+			"\t\treturn ($0)",
+			"};",
+			"",
+			"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Create react functional component in typescript"
+	},
+
+	"simple import": {
+		"prefix": "imp",
+		"body": ["import {$0} from '$1';"],
+		"description": "Simple universal import"
+	},
+
+	"simple arrow function": {
+		"prefix": "fn",
+		"body": ["($1) => {$0}"],
+		"description": "Simple arrow function"
+	},
+
+	"console log": {
+		"prefix": "clg",
+		"body": ["console.log($0)"],
+		"description": "Simple console log"
+	},
+
+	"simple react hook": {
+		"prefix": "hk",
+		"body": ["const [$0] = $1()"],
+		"description": "Simple react hook"
+	}
+}
