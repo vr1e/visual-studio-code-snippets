@@ -13,7 +13,85 @@
 
 	"console log": {
 		"prefix": "clg",
-		"body": ["console.log($0)"],
+		"body": ["console.log($0);"],
 		"description": "Simple console log"
+	},
+
+	// React.js
+
+	"react functional component": {
+		"prefix": "rfc",
+		"body": [
+			"export default function $TM_FILENAME_BASE($1) {",
+			"\t\treturn ($0)",
+			"};"
+		],
+		"description": "Create react functional component"
+	},
+
+	"react fragment": {
+		"prefix": "rfg",
+		"body": ["<>$0</>"],
+		"description": "Create react fragment"
+	},
+
+	// Next.js
+
+	"next.js react functional component": {
+		"prefix": "nfc",
+		"body": [
+			"export default function ${1:$TM_FILENAME_BASE}($2) {",
+			"\treturn ($0)",
+			"};"
+		],
+		"description": "Create next.js react functional component"
+	},
+
+	"next.js import router": {
+		"prefix": "inr",
+		"body": ["import { useRouter } from 'next/router';"],
+		"description": "Import router from next"
+	},
+
+	"next.js import link": {
+		"prefix": "inl",
+		"body": ["import Link from 'next/link';"],
+		"description": "Import link from next"
+	},
+
+	"next.js getStaticProps": {
+		"prefix": "ngspr",
+		"body": [
+			"export async function getStaticProps($1) {",
+			"\treturn {",
+			"\t\tprops:{$0}",
+			"\t}",
+			"};"
+		],
+		"description": "getStaticProps function for next.js"
+	},
+
+	"next.js getServerSideProps": {
+		"prefix": "ngsspr",
+		"body": [
+			"export async function getServerSideProps($1) {",
+			"\treturn {",
+			"\t\tprops: {$0}",
+			"\t}",
+			"};"
+		],
+		"description": "getServerSideProps function for next.js"
+	},
+
+	"next.js getStaticPaths": {
+		"prefix": "ngspa",
+		"body": [
+			"export async function getStaticPaths($1) {",
+			"\treturn {",
+			"\t\tprops: {$0}",
+			"\t}",
+			"};"
+		],
+		"description": "getStaticPaths function for next.js"
 	}
 }
