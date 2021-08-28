@@ -1,7 +1,13 @@
-# visual-studio-code-snippets
+# 📚 Visual Studio Code snippets library
 
-My personal snippets I use inside visual studio code to speed up my workflow.
+Personal snippets I use inside visual studio code to speed up my workflow.
 
-## Usage
+```
+┌── javascript.json
+├── typescript.json
+└── typescriptreact.json
+```
 
-Just put into `File > Preferences > User Snippets`
+## 🔨 Usage
+
+Go to `File > Preferences > User Snippets` pick a language and paste contents inside of the JSON file. Snippets files are written in JSON, support C-style comments. More info [here](https://code.visualstudio.com/docs/editor/userdefinedsnippets).

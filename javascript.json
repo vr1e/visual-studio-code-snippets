@@ -11,6 +11,28 @@
 		"description": "Simple es6 function"
 	},
 
+	"export function statement": {
+		"prefix": "efn",
+		"body": [
+			"export function ${1:FunctionName}($2) {",
+			"\t\t$0",
+			"\t\treturn ;",
+			"}"
+		],
+		"description": "Export function statement"
+	},
+
+	"export default function statement": {
+		"prefix": "edfn",
+		"body": [
+			"export default function ${1:FunctionName}($2) {",
+			"\t\t$0",
+			"\t\treturn ;",
+			"}"
+		],
+		"description": "Export function statement"
+	},
+
 	"console log": {
 		"prefix": "clg",
 		"body": ["console.log($0);"],
@@ -24,7 +46,7 @@
 		"body": [
 			"export default function $TM_FILENAME_BASE($1) {",
 			"\t\treturn ($0)",
-			"};"
+			"}"
 		],
 		"description": "Create react functional component"
 	},
@@ -42,7 +64,7 @@
 		"body": [
 			"export default function ${1:$TM_FILENAME_BASE}($2) {",
 			"\treturn ($0)",
-			"};"
+			"}"
 		],
 		"description": "Create next.js react functional component"
 	},
@@ -59,6 +81,12 @@
 		"description": "Import link from next"
 	},
 
+	"next.js import image": {
+		"prefix": "ini",
+		"body": ["import Image from 'next/image';"],
+		"description": "Import image from next"
+	},
+
 	"next.js getStaticProps": {
 		"prefix": "ngspr",
 		"body": [
@@ -66,7 +94,7 @@
 			"\treturn {",
 			"\t\tprops:{$0}",
 			"\t}",
-			"};"
+			"}"
 		],
 		"description": "getStaticProps function for next.js"
 	},
@@ -78,7 +106,7 @@
 			"\treturn {",
 			"\t\tprops: {$0}",
 			"\t}",
-			"};"
+			"}"
 		],
 		"description": "getServerSideProps function for next.js"
 	},
@@ -88,9 +116,10 @@
 		"body": [
 			"export async function getStaticPaths($1) {",
 			"\treturn {",
-			"\t\tprops: {$0}",
+			"\t\tpaths: [{$0}],",
+			"\tfallback: true",
 			"\t}",
-			"};"
+			"}"
 		],
 		"description": "getStaticPaths function for next.js"
 	}
